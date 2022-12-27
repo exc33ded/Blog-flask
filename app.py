@@ -7,10 +7,22 @@ app = Flask(__name__)
 def index():
     return "<h1>Hello, World!</h1>"
 
+fav_pizza = ["mushroom", "cheese", "chicken", 55]
 @app.route("/user/<name>")
 def user(name):
-    return f"<h2>Hello {name}</h2>"
+    return render_template("index.html", user_name=name, pizzatopping=fav_pizza)
 
+
+# Create Custom Errpr pages
+
+# Invalid URL
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template("500.html"), 500
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", debug=True)
