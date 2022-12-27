@@ -5,6 +5,9 @@
     "ms-toolsai.jupyter-keymap",
     "ms-toolsai.jupyter-renderers",
     "wholroyd.jinja",
-    "formulahendry.code-runner"
+    "formulahendry.code-runner",
+    "abusaidm.html-snippets",
+    "ecmel.vscode-html-css",
+    "xabikos.JavaScriptSnippets"
   ]
 }
