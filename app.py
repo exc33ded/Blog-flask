@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "<h1>Hello, World!</h1>"
+    return render_template("index.html")
 
 fav_pizza = ["mushroom", "cheese", "chicken", 55]
 @app.route("/user/<name>")
 def user(name):
-    return render_template("index.html", user_name=name, pizzatopping=fav_pizza)
+    return render_template("user.html", user_name=name, pizzatopping=fav_pizza)
 
 
 # Create Custom Errpr pages
